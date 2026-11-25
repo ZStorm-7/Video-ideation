@@ -43,12 +43,20 @@ See a real run: [`examples/bitframe-2026-11.md`](examples/bitframe-2026-11.md).
 |---|---|---|
 | `tools/channel_scan.py @you` | your uploads, Shorts and long-form medians, hits and flops | free YouTube key |
 | `tools/find_outliers.py --q "..."` | outliers: 10x subscribers OR 10x channel average, 10k+ subs, recent | free YouTube key |
-| `tools/overlap.py --idea "..."` | "did I already make this?" | none |
+| `tools/overlap.py --idea "..."` | "did I already make this?" (any language) | none |
 | `tools/demand.py "topic"` | real YouTube autocomplete demand signal + title phrases | none |
 
+## Other things you can ask for
+Besides a full run, say: **"ideas from my backlog"**, **"score my idea: ..."**, **"find / change my niche"**, or
+**"log how my video did"** (that last one is what makes the skill smarter about *you*). See `workflow/modes.md`.
+
+## Keeping it up to date
+Your private copy doesn't update itself. See [`docs/updating.md`](docs/updating.md) (three commands).
+
 ## Repo map
-`SKILL.md` (start) · `workflow/` (the 8 steps) · `library/` (techniques, hooks, titles, thumbnails) · `niches/`
-(tech, gaming, education, vlog packs) · `templates/` · `creator/` (your memory) · `tools/` · `docs/` · `examples/`
+`SKILL.md` (start) · `workflow/` (the 8 steps + shorter modes) · `library/` (techniques, hooks, titles, thumbnails) ·
+`niches/` (tech, gaming, education, vlog, food, fitness, finance, business, beauty, travel starting packs) ·
+`templates/` · `creator/` (your memory) · `tools/` · `tests/` · `docs/` · `examples/`
 
 ## Contributing
 Niche packs, techniques, real example runs and agent reports are the most useful. See [CONTRIBUTING.md](CONTRIBUTING.md).

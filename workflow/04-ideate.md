@@ -10,6 +10,9 @@ Use `prompts/anti-echo-chamber.md` (the core prompt) on the 5 outliers, plus the
 - **Format:** Short or long-form (and the rough length).
 - **Why this creator:** one line tying it to their profile (a skill, a past hit, a recurring format, their audience).
 
+Write the ideas in the audience's language (profile), not the language you are chatting in, if they differ. If the
+creator's niche has a pack in `niches/`, check its "Overdone" list before you keep an idea.
+
 ## Make them non-generic
 - Run the "anyone test": if another channel in the niche could post it unchanged, add specificity (the creator's angle,
   experience, format, character, location, data, a named example).

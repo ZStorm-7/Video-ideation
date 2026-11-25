@@ -21,14 +21,30 @@ that gets the same 10 ideas). Every file you need is plain Markdown in this repo
    starts where this one ended.
 6. **Free by default.** Everything works with no paid tool. Integrations (YouTube Data API key, Gemini, vidIQ) only make
    it faster or more accurate; see `docs/integrations.md`.
+7. **Speak the audience's language.** Ask once which language and country the audience watches in (it goes in the
+   profile). Write hooks, titles and thumbnail text in that language, pass `--lang` / `--country` to the tools, and talk
+   to the creator in whatever language they talk to you in. The examples in this repo are in English; the method isn't.
+8. **Niche packs are hypotheses, not facts.** If `niches/` has a pack for the creator's niche, use it to decide where to
+   look (adjacent niches, search keywords). Whatever today's outliers show overrides it. No pack? Work from
+   `niches/_template.md`, and offer to save what you learned as a new pack.
 
 ## Start here (every session)
 1. Read `creator/profile.md`. If it doesn't exist or is empty → this is a new creator: go to `workflow/00-start.md`.
 2. Read the rest of `creator/` (past-videos, backlog, feedback, session-log). Tell the creator in one line what you know
    ("Profile depth 2/4: I know your niche, audience and 37 past videos; no performance feedback yet").
-3. Ask what they want today (AskUserQuestion-style multiple choice if your agent has it, plain question otherwise):
-   **New ideas** (full run) · **Ideas from my backlog** · **Score my own idea** · **Find / change my niche** · **Log how a video did**.
-4. Follow the matching workflow file. Keep the creator in the loop at every step marked **[ASK]**.
+3. Ask what they want today (AskUserQuestion-style multiple choice if your agent has it, plain question otherwise),
+   then open the matching file. Keep the creator in the loop at every step marked **[ASK]**.
+
+| They want | Go to |
+|---|---|
+| **New ideas** | the full run below (`workflow/00` → `07`) |
+| **Ideas from my backlog** | `workflow/modes.md` § A |
+| **Score my own idea** | `workflow/modes.md` § B |
+| **Find / change my niche** | `workflow/modes.md` § C → `workflow/02-find-niche.md` |
+| **Log how a video did** | `workflow/modes.md` § D |
+
+If the creator just says "give me ideas" with no menu, that's **New ideas**. If they paste a video link or a stat, that's
+probably **Log how a video did** or **Score my own idea**: ask one question to be sure.
 
 ## The full run (new ideas)
 | Step | File | Output |

@@ -15,6 +15,11 @@ works with real people. Ideas start here, not in a blank chat.
   the 5 from your own niche, and never their topic.
 - **5 videos, at least 3 different channels.**
 
+## Where to start searching
+Read the creator's pack in `niches/` if there is one: its "adjacent niches" and "search keywords" are your first queries.
+Always add the audience's language and country (`--lang`, `--region`) so you find outliers they could actually watch.
+Run 3-5 queries across at least 2 adjacent niches before judging the results; one query is not a search.
+
 ## How (free first)
 - **YouTube Data API key (free):** `python3 tools/find_outliers.py --q "keyword" --q "keyword 2" --format short --days 7 --lang en --save creator/outliers.md`
   → prints candidates that pass the rules (ratio, 10k minimum, recency) and appends picks to `creator/outliers.md`.
