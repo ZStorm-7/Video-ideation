@@ -18,6 +18,11 @@ only you can see, so every session starts where the last one ended." Then **[ASK
      in the files; it refuses to push otherwise.
 - **A local folder only.** Nothing leaves the computer. Fine to start with; the notes won't follow them to another device.
   Run `init` and skip the GitHub steps.
+- **One file (chat apps that can't keep files between chats, like the Claude app).** Keep all notes in a single Markdown file,
+  `idea-scout-notes.md`, with one `## profile.md`, `## past-videos.md`, `## outliers.md`, `## backlog.md`, `## feedback.md`
+  and `## session-log.md` section each (starting from `templates/`). At the end of every session give the creator that file to
+  download and say: "Save this and attach it next time." At the start, if they attached one (or it's in the Project files),
+  read it as `<notes>`. It lives only with the creator, so it's private by default.
 
 If a `creator/` folder exists in an older copy of the skill, move it over: `python3 tools/notes.py init --import
 <old creator folder>`. Never write creator data into the skill's own folder.

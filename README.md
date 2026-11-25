@@ -31,7 +31,8 @@ See a real run: [`examples/bitframe-2026-11.md`](examples/bitframe-2026-11.md).
    specific it gets. See [`docs/memory.md`](docs/memory.md).
 
 ## Install (2 minutes)
-1. **Get the skill** (public, nothing personal in it):
+1. **Get the skill** (public, nothing personal in it). Full guide: [`docs/install.md`](docs/install.md).
+   - **Claude app (no terminal):** download `idea-scout.zip` from the [latest release](https://github.com/ZStorm-7/Video-ideation/releases/latest), then **Customize → Skills** and add it.
    - **Claude Code:** `git clone https://github.com/ZStorm-7/Video-ideation ~/.claude/skills/idea-scout`, then type `/idea-scout`.
    - **Any other agent:** clone it anywhere, open the folder, and say *"Read SKILL.md and give me video ideas."*
    - **No agent?** Paste [`prompts/anti-echo-chamber.md`](prompts/anti-echo-chamber.md) into any free AI chat.

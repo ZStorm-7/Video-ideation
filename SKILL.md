@@ -1,6 +1,6 @@
 ---
 name: idea-scout
-description: Free YouTube video ideation for any creator, in any AI agent. Learns your channel (or helps you pick a niche), finds 5 proven outlier videos (10x views vs subscribers or vs the channel's average, channels with 10k+ subscribers), pitches specific non-generic ideas with 3-second and 30-second hooks, 3 titles and a thumbnail concept, checks them against your past videos and real search demand, scores and ranks them, and remembers you across sessions in a private notes repo of your own that it keeps up to date. Use for "video ideas", "what should I make next", "find my niche", "/idea-scout".
+description: Free YouTube video ideas built from proof. Finds 5 real outlier videos, then writes specific ideas with hooks, titles and thumbnails for YOUR channel. Use for "video ideas", "what to make next".
 ---
 
 # Idea Scout: specific video ideas from proof, not from a blank chat
