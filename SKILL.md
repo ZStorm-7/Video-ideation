@@ -16,7 +16,8 @@ that gets the same 10 ideas). Every file you need is plain Markdown in this repo
 3. **Specific angle, never a topic.** "How RAM works" is a topic. "Your laptop has 8 GB of RAM: here's the one app eating
    6 of it" is an angle.
 4. **Proof over vibes.** Numbers (outlier ratios, demand signals, past performance) beat opinions. Say when a number is an
-   estimate.
+   estimate. An outlier shows that something worked, not why: label what you *observed* separately from what you *infer*,
+   and give hypotheses a confidence and evidence (workflow/03). Never invent a view count, a subscriber count or a link.
 5. **Remember the creator.** End every session by updating `<notes>/` (workflow/07) so the next session, in any agent,
    starts where this one ended.
 6. **Free by default.** Everything works with no paid tool. Integrations (YouTube Data API key, Gemini, vidIQ) only make
@@ -33,6 +34,15 @@ that gets the same 10 ideas). Every file you need is plain Markdown in this repo
 `python3 tools/notes.py where` prints it; in a cloud agent it's the attached repo named like `idea-scout-notes`). This repo
 holds no personal data: never write channel data into it. If `<notes>` doesn't exist yet, `workflow/00-start.md` §0a sets it
 up. Save with `python3 tools/notes.py save "<message>"`, which refuses to push to a public repo or with a key in the files.
+
+## Saving: what gets saved, when, and the recap
+**What:** the creator's profile, past videos, the outliers used, the backlog of ideas, the results they report, and a
+one-line session log: six small Markdown files in `<notes>`. Nothing else, and never a key.
+**When:** at the end of every session, and right after a result is logged. Not mid-way through a half-finished run.
+**How:** `python3 tools/notes.py save "<message>"` (private repo or local folder), or one file `idea-scout-notes.md` for
+chat apps that cannot keep files. The tool refuses a public repo or a key in the files; never work around it.
+**The recap:** the last thing the creator sees is a **Saved** box: which files changed and how, where they live, and what to
+do first next time (`templates/ideas-output.md`, `workflow/07-deliver-and-remember.md`). Say "saved" only when it really was.
 
 ## Start here (every session)
 1. Read `<notes>/profile.md`. If it doesn't exist or is empty → this is a new creator: go to `workflow/00-start.md`.
@@ -58,7 +68,7 @@ probably **Log how a video did** or **Score my own idea**: ask one question to b
 | 0 | `workflow/00-start.md` | route: new creator or existing channel |
 | 1 | `workflow/01-learn-channel.md` | `<notes>/profile.md`, `<notes>/past-videos.md` (existing channels) |
 | 2 | `workflow/02-find-niche.md` | a chosen niche + 3 top videos to study (new creators, or "change my niche") |
-| 3 | `workflow/03-find-outliers.md` | 5 outliers (10x subscribers OR 10x channel average, 10k+ subs, recent) in `<notes>/outliers.md` |
+| 3 | `workflow/03-find-outliers.md` | 5 outliers (10x subscribers OR 10x channel average, 10k+ subs, recent), each with an evidence-labelled "why it worked", in `<notes>/outliers.md` |
 | 4 | `workflow/04-ideate.md` | 10-15 raw ideas from the outliers' psychology + `library/techniques.md` |
 | 5 | `workflow/05-check-and-score.md` | overlap, demand and saturation checks; a score out of 30; top 3-5 |
 | 6 | `workflow/06-package.md` | per top pick: 3-second + 30-second hook, 3 titles, thumbnail concept |
@@ -77,6 +87,6 @@ Never pretend to a higher level than the files support.
 
 ## Output format (what the creator gets)
 For each top pick (usually 3): the angle in one line · score /30 with the 2 strongest and the weakest criterion · which
-outlier it borrows from (link, ratio) · 3-second hook (first words + what's on screen) · 30-second hook (the promise +
+outlier it borrows from (link, ratio) and the mechanism borrowed (a hypothesis, with confidence) · 3-second hook (first words + what's on screen) · 30-second hook (the promise +
 the open loop) · 3 titles (≤ 60 characters) · thumbnail concept (image + ≤ 4 words) · demand signal · risk ("why this
-could flop"). Then the rest as a short ranked list, saved to the backlog. Template: `templates/ideas-output.md`.
+could flop"). Then the rest as a short ranked list, saved to the backlog, and the **Saved** recap. Template: `templates/ideas-output.md`.

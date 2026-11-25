@@ -17,7 +17,15 @@ Then **save it** so other sessions see it (see `docs/memory.md`):
 1. If your agent can run commands: `python3 tools/notes.py save "<date> <what changed>"`. It checks that the repo is
    private and that no key is in the files, then commits and pushes. If it refuses, fix what it names; never bypass it.
 2. If it can't run commands: give the creator the updated files and say which to replace in their notes repo.
-Tell the creator in one line what was saved and where.
+## Show the "Saved" recap (every session, last thing the creator sees)
+End the session with the **Saved** box from `templates/ideas-output.md`, so the creator can see their progress is kept:
+- One line per file that **actually changed** (`profile.md`, `backlog.md`, `outliers.md`, `feedback.md`, `past-videos.md`,
+  `session-log.md`), saying what changed in plain words ("+9 ideas, 1 in progress", "profile depth 1 → 2").
+- **Where** it lives: the private repo (say it was checked private), a local folder (say it isn't backed up), or the one
+  file `idea-scout-notes.md` (hand it over to download and say "save this and attach it next time").
+- **Next time:** the one thing to do first.
+- Only write "saved" if the save really worked (`tools/notes.py save` exited ok, or you handed over the file). If it
+  refused or failed, show that instead and say exactly what to fix. Never show a recap for files you did not change.
 
 ## The feedback loop
 When the creator comes back with results (**Log how a video did**), record in `<notes>/feedback.md`: the idea, the

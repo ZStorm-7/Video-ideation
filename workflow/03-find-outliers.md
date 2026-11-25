@@ -28,6 +28,33 @@ Run 3-5 queries across at least 2 adjacent niches before judging the results; on
   vidIQ's outlier finder, TikTok and Reddit work too (TikTok/Reddit only as inspiration, the 5 must be YouTube).
 - Get each outlier's **transcript** (description → Show transcript) and note the **thumbnail and title**.
 
+## Explain why each one worked (evidence, not vibes)
+An outlier proves an outcome happened. It does not prove *why*. So for each of the 5, write a breakdown and label every
+claim, so the creator can tell what you saw from what you are guessing:
+- **Observed:** something you can point to: the exact first words, the thumbnail's subject and text, the title, the
+  structure with timestamps, the numbers, what commenters say. Anyone could check it.
+- **Hypothesis:** your explanation of why it worked, with **Confidence** (high / medium / low) and the **Evidence** for it.
+  If you have no evidence, write "unknown". Never present a guess as a finding.
+
+Look through these five lenses, and note the evidence for each:
+1. **Promise:** what the viewer wanted, and whether people search for it (`tools/demand.py`).
+2. **Hook:** the first 3 seconds, and the first 30 seconds of a long video: words, and what is on screen.
+3. **Packaging:** the title pattern, and the thumbnail (subject, text, colour).
+4. **Structure:** pacing, open loops, how early the first payoff comes (from the transcript).
+5. **Context:** timing or a trend, the channel's own pull, the length, and what the top comments say.
+
+Rule out the lazy explanations before you trust a hypothesis:
+- **Topic or packaging?** Find the channel's other videos on the same topic. If they did not spike, the topic was not the
+  reason: look at the angle and the packaging.
+- **One-off or habit?** One big hit among flat results suggests luck or an outside push. A channel that is regularly above
+  its average has a "channel effect" you cannot borrow.
+- **Still climbing?** A young video may still be accelerating (views per hour), an old one has plateaued. Say which.
+- **What the audience said:** the top comments often name the reason in their own words.
+
+End each breakdown with three lines: **Borrow** (the transferable mechanism, in one sentence), **Don't borrow** (what is
+specific to that channel or topic), and **How to test it** (the cheapest way the creator could check this hypothesis on their
+own channel). The feedback loop (`workflow/modes.md` § D) later confirms or kills the hypotheses with the creator's own results.
+
 ## Write `<notes>/outliers.md` (template: `templates/outliers.md`)
-Per outlier: link, title, channel, subscribers, views, channel average, ratio(s), date found, niche, and a 3-line
-"why it worked" (hook in the first 1.5-3 s, structure, packaging). Outliers older than 30 days are stale: refresh them.
+Per outlier: link, title, channel, subscribers, views, channel average, ratio(s), date found, niche, and the breakdown
+above. Outliers older than 30 days are stale: refresh them.

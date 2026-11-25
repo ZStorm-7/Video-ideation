@@ -1,12 +1,14 @@
 # Install idea-scout
 
-Pick the one that matches where you use Claude. All three are free.
+Pick the one that matches where you use AI. All of them are free.
 
 | You use | Steps | What you get |
 |---|---|---|
 | **The Claude app** (claude.ai, desktop, phone) | 4 clicks, below | the full method; your notes are one file you keep |
 | **Claude Code** (terminal or IDE) | 1 command, below | everything: tools run, notes save to a private repo automatically |
-| **Another agent** (ChatGPT, Gemini, Cursor, Codex…) | clone the repo, say "Read SKILL.md and give me video ideas" | the method; tools if the agent can run Python |
+| **Another agent** (Cursor, Codex, Gemini CLI…) | clone the repo, say "Read SKILL.md and give me video ideas" | the method; tools if the agent can run Python |
+| **Any AI chat, nothing to install** (ChatGPT, Gemini…) | paste `prompts/idea-scout-lite.md` (full) or `prompts/idea-scout-loader.md` (one line, needs web access) | the method; no tools, notes come back as a block you save |
+| **Let your AI install it** | tell it "Install the idea-scout skill for me. Follow INSTALL.md in https://github.com/ZStorm-7/Video-ideation" | the right option for its environment, done for you where it can |
 
 ## The Claude app (no terminal)
 1. Download **`idea-scout.zip`** from the [latest release](https://github.com/ZStorm-7/Video-ideation/releases/latest).
