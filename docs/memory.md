@@ -30,7 +30,8 @@ your private notes repo to the session; the agent reads and writes it there.
 
 ## What protects your privacy
 `tools/notes.py check` (run by `save`) refuses to push when:
-- GitHub says the notes repo is **public** (it asks GitHub anonymously: if a stranger can see it, so it fails);
+- GitHub says the notes repo is **public** (it asks GitHub anonymously, and if GitHub's API is rate-limited it tries an
+  anonymous `git ls-remote` instead: if a stranger can read it, the save fails);
 - a file looks like it contains an API key or token (it reports the file, never the key);
 - the notes folder is inside the public skill folder.
 Your own responsibility: create the repo as **Private**, and keep keys in `~/.config/idea-scout/.env` or your agent's settings.

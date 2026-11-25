@@ -95,6 +95,37 @@ class Safety(NotesCase):
         self.assertTrue(any('inside the public skill repo' in e for e in errs))
 
 
+class PublicCheck(unittest.TestCase):
+    """is_public must not let a rate-limited or unclear GitHub API answer slip through as 'fine'."""
+    def err(self, code): return urllib_error(code)
+
+    def test_404_means_not_public(self):
+        with mock.patch('urllib.request.urlopen', side_effect=urllib_error(404)):
+            self.assertIs(notes.is_public('o', 'r'), False)
+
+    def test_rate_limited_api_falls_back_to_anonymous_git(self):
+        with mock.patch('urllib.request.urlopen', side_effect=urllib_error(403)), mock.patch.object(notes, 'public_via_git', return_value=True) as g:
+            self.assertIs(notes.is_public('o', 'r'), True); g.assert_called_once()
+
+    def test_git_fallback_reads_the_error(self):
+        def run(rc, err): return mock.Mock(returncode=rc, stderr=err)
+        with mock.patch('subprocess.run', return_value=run(0, '')): self.assertIs(notes.public_via_git('o', 'r'), True)
+        with mock.patch('subprocess.run', return_value=run(128, "fatal: could not read Username for 'https://github.com'")): self.assertIs(notes.public_via_git('o', 'r'), False)
+        with mock.patch('subprocess.run', return_value=run(128, 'fatal: unable to access: Could not resolve host: github.com')): self.assertIsNone(notes.public_via_git('o', 'r'))
+
+    def test_git_fallback_ignores_stored_credentials(self):
+        with mock.patch('subprocess.run', return_value=mock.Mock(returncode=0, stderr='')) as run:
+            notes.public_via_git('o', 'r')
+        cmd = run.call_args[0][0]
+        self.assertIn('credential.helper=', cmd)  # an empty helper: a private repo must not look public because we are logged in
+        self.assertEqual(run.call_args[1]['env']['GIT_TERMINAL_PROMPT'], '0')
+
+
+def urllib_error(code):
+    import urllib.error
+    return urllib.error.HTTPError('https://api.github.com/x', code, 'x', {}, None)
+
+
 class Save(NotesCase):
     def test_save_commits_and_pushes_to_a_remote(self):
         self.init()

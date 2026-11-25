@@ -35,7 +35,7 @@ class CopyPastePrompts(unittest.TestCase):
 
     def test_lite_prompt_blocks_invented_observations_and_rule_bending(self):
         flat = ' '.join(self.lite().split()).lower()
-        for must in ('not seen', 'rule check', 'every candidate', 'fail', 'never talk yourself into an exception', 'never re-ask', 'channel name', 'always low', 'either ratio is 10 or more', 'known:', 'missing:', 'build the table first', 'under 10,000 subscribers', 'never write my replies for me'):
+        for must in ('not seen', 'rule check', 'every candidate', 'fail', 'never talk yourself into an exception', 'never re-ask', 'channel name', 'always low', 'either ratio is 10 or more', 'known:', 'missing:', 'build the table first', 'under 10,000 subscribers', 'never write my replies for me', 'saved ·', 'unverified guess', 'plain sum', 'unverified trend', 'do only that', 'a reply without the notes block is incomplete', 'i have no benchmark', 'finish like step 7', 'this is result n', 'backlog status:', 'never quote a', 'do the request first'):
             self.assertIn(must, flat, must)
 
     def test_loader_points_at_the_raw_skill_file(self):

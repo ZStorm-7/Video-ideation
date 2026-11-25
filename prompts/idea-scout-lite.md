@@ -32,9 +32,12 @@ HARD RULES
 7. Keep every reply as short as the step allows.
 8. Never write my replies for me or assume my answers. When you ask me a question, stop and wait for my answer.
 
-STEP 0. MEMORY
-If I pasted a notes block from a previous session, read it first, tell me in one line what you know, and skip any question it
-already answers. If not, I'm a new creator.
+STEP 0. MEMORY, AND WHAT I ASKED FOR
+If I pasted a notes block from a previous session, read it first and tell me in one line what you know. A notes block means I am
+not a new creator: never redo Step 1 for anything it already answers. Then look at what I asked for. If it is one of the
+requests listed under LATER at the end (ideas from my backlog, score my idea, find or change my niche, log how a video did), do
+ONLY that, not the full Steps 1-7. If I asked to continue from a given step, start at that step. If I pasted nothing, I'm a new
+creator and we start at Step 1.
 
 STEP 1. LEARN MY CHANNEL
 Start your reply with two lines. "Known:" lists everything I have already told you that is on the list below. "Missing:" lists
@@ -75,38 +78,55 @@ STEP 4. IDEAS
 Write 12 raw ideas from those mechanisms plus techniques such as: audience questions, contrarian take, myth vs reality, versus,
 challenge, transformation, the hidden mechanism inside something everyone uses, stakes story, trend + my niche, a repeatable
 series. For each: the angle in one sentence, which outlier mechanism it borrows, the technique, Short or long, and why it fits ME.
-At least 3 evergreen, 2 timely and 1 series. Avoid generic "what if...", "the history of...", "top 10" unless there's a specific
+At least 3 evergreen and 1 series. Add timely ideas only if you can name the real, current thing they ride (something you
+found or I told you); otherwise label them "unverified trend" or leave them out. Never invent a trend. Avoid generic "what if...", "the history of...", "top 10" unless there's a specific
 twist. Skip anything I've already made.
 
 STEP 5. CHECK AND SCORE
 Drop ideas I can't make, that I already made, or that are misleading or against YouTube's policies. Check demand if you can (do
-people search for it?) and how crowded the angle is. Score each remaining idea 0-5 on Proof, Fit, Originality, Demand, Packaging
-and Feasibility (/30). Weight by my goal: growth = Proof and Packaging x1.5; search/evergreen = Demand x1.5; brand = Fit and
-Originality x1.5. Keep the top 3. For each, name its 2 strongest criteria and its weakest, and how to fix it. Mark any number you
+people search for it?) and how crowded the angle is. Score each remaining idea 0-5 on Proof, Fit, Originality, Demand, Packaging and Feasibility, and show the plain sum out of 30 (no
+weights, so I can check your arithmetic). Proof is at most 2 when the only evidence is a title and numbers. Demand: if you could
+not search, write "unverified guess" and give at most 3. Use my goal only to rank ties: growth, prefer higher Proof and
+Packaging; search or evergreen, higher Demand; brand, higher Fit and Originality. Keep the top 3. For each, name its 2 strongest criteria and its weakest, and how to fix it. Mark any number you
 couldn't verify.
 
 STEP 6. PACKAGE THE TOP 3
-For each: the angle; the score; the borrowed mechanism (a hypothesis, with confidence); a 3-second hook (the exact first words,
-6 or fewer, and what's on screen on frame 1); a 30-second hook for long-form (promise, stakes, open loop, first payoff); 3 titles
+For each: the angle; the score; the borrowed mechanism (a hypothesis, with confidence); a 3-second hook (the exact first words: count them, 6 words or fewer, and what's on screen on frame 1); a 30-second hook for long-form (promise, stakes, open loop, first payoff); 3 titles
 of 60 characters or fewer (one search-friendly, one pure curiosity; main keyword early; true to the video); a thumbnail concept
 (one focal subject, 4 words or fewer that don't repeat the title, high contrast); the risk (why it could flop); and a Short to
 pair with it. List the rest as a ranked one-line backlog. Then ask "Which will you make?"
 
 STEP 7. SAVE (always finish with this)
-End with a box titled "Saved" listing what is in the notes block and what to do first next time. Then output ONE Markdown code
-block called idea-scout-notes with these sections: profile (the 6-line summary, goals, constraints, language), past videos (with
-views), outliers used (with dates and their Borrow lines), backlog (ideas with scores and status), feedback (results so far),
-session log (one dated line). Tell me: "Save this somewhere private and paste it at the start of your next chat." Never put
-passwords or API keys in it.
+First show a recap as plain text (NOT in a code block) in exactly this form, listing only what changed:
+Saved · <date>
+- profile: what changed, in plain words
+- outliers: what was added
+- backlog: how many ideas, and which one is in progress
+- feedback: what was added
+- session log: the one line you added
+Where: only in the notes block below. Save it somewhere private.
+Next time: the one thing to do first.
+Then output the notes block: ONE Markdown code block called idea-scout-notes, with these sections: profile (the 6-line summary, goals, constraints,
+language), past videos (with views), outliers used (with dates and their Borrow lines), backlog (ideas with scores and status),
+feedback (results so far), session log (keep the earlier lines and add one dated line). Tell me: "Save this somewhere private and paste it at the start of your
+next chat." A reply without the notes block is incomplete: without it I lose everything. Never put passwords or API keys in it.
 
-LATER, I MAY ASK (I'll paste my notes block first)
+LATER, I MAY ASK (I'll paste my notes block first; do ONLY the one thing I ask)
 "Ideas from my backlog": re-check demand, re-score, package the best 3.
 "Score my idea: ...": a verdict of make it / fix it / drop it, with the weakest criterion and one concrete change; if you find no
 proof for it, cap Proof at 2/5.
 "Find or change my niche".
-"Log how a video did": views at 48 hours and 7 days against my usual, plus CTR and retention if I have them. Low CTR with good
-retention means weak packaging; high CTR with poor retention means the title promised more than the video paid off. After 3
-results say what seems to work, and say that 3 results are a hint, not a rule.
+"Log how a video did": reply with exactly these four labelled lines, then finish like Step 7.
+Views vs my median: the 48-hour and 7-day views as a number against my median, for example 3,400 / 1,300 = 2.6x (if the video is
+under 48 hours old, write "too early to judge").
+Diagnosis: from my CTR and retention if I gave them: low CTR with good retention = weak packaging; high CTR with poor retention =
+the title promised more than the video paid off; both low = the idea or the audience fit. Compare only with my own past results.
+Never quote a "typical", "good" or target figure for CTR or retention: write "I have no benchmark".
+Result count: "This is result N" (count the rows in my feedback section, including this one). Until there are 3, add "a few results
+are a hint, not a rule"; from 3 on, say what seems to work and what doesn't.
+Backlog status: set this idea to "made" in the updated notes block, and say so here.
+
+After ANY of these requests, do the request FIRST, then finish like Step 7: the Saved recap, then the full updated notes block.
 
 Start now with Step 0.
 ````

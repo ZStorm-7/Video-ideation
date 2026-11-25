@@ -30,15 +30,31 @@ def github_repo(url):
     m = re.search(r'github\.com[:/]+([^/\s]+)/([^/\s]+?)(?:\.git)?/?$', url)
     return (m.group(1), m.group(2)) if m else None
 
+def public_via_git(owner, repo):
+    """Second opinion that doesn't use GitHub's rate-limited API: can git read the repo with NO credentials?
+    True = yes (public), False = it asked for a login or said not found (private or missing), None = can't tell."""
+    env = dict(os.environ, GIT_TERMINAL_PROMPT='0', GIT_ASKPASS='true', GIT_CONFIG_NOSYSTEM='1')
+    try:
+        r = subprocess.run(['git', '-c', 'credential.helper=', 'ls-remote', '--exit-code', '--heads', f'https://github.com/{owner}/{repo}.git'],
+                           capture_output=True, text=True, timeout=30, env=env)
+    except Exception:
+        return None
+    if r.returncode in (0, 2): return True  # 2 = reachable but no matching heads: still readable without a login
+    err = (r.stderr or '').lower()
+    if any(k in err for k in ('could not read username', 'authentication failed', 'repository not found', 'terminal prompts disabled')): return False
+    return None
+
 def is_public(owner, repo):
-    """True if anyone can see the repo (an unauthenticated API call succeeds), False if not, None if we can't tell."""
+    """True if anyone can see the repo, False if not, None if we can't tell. Asks GitHub's API anonymously (404 = private or
+    missing), and falls back to an anonymous `git ls-remote` when the API is rate-limited or unclear."""
     req = urllib.request.Request(f'https://api.github.com/repos/{owner}/{repo}', headers={'User-Agent': 'idea-scout'})
     try:
         urllib.request.urlopen(req, timeout=15); return True
     except urllib.error.HTTPError as e:
-        return False if e.code == 404 else None
+        if e.code == 404: return False
     except Exception:
-        return None
+        pass
+    return public_via_git(owner, repo)
 
 def find_secrets(path):
     """[(relative file, what it looks like)]; never returns the secret itself."""

@@ -18,6 +18,7 @@ creator's niche has a pack in `niches/`, check its "Overdone" list before you ke
   experience, format, character, location, data, a named example).
 - Avoid the overused defaults unless an outlier proves a fresh twist: generic "what if…", "history facts", "top 10"
   without a hook, "explained" without a stake.
-- Mix: at least 3 evergreen (searchable for years), at least 2 timely (riding something happening now), at least 1 series
-  or repeatable format idea.
+- Mix: at least 3 evergreen (searchable for years), at least 1 series or repeatable format idea, and timely ideas (riding
+  something happening now) only when you can name the real current thing they ride. Never invent a trend; no verified trend
+  means no timely idea, or one labelled "unverified trend".
 - Use the creator's own sources: comment questions on their videos, their backlog, their feedback ("what worked here").

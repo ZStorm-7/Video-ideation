@@ -23,6 +23,9 @@
 | **Demand** | people search for it (autocomplete/volume) or it rides a live trend |
 | **Packaging** | the title + thumbnail are obvious and make you need to click (write them first: if you can't, it's weak) |
 | **Feasibility** | the creator can make it well this week |
+Total /30 = Σ(weight × score) × 30 ÷ Σ(weight × 5), with every weight 1 unless the goal below changes it, so the total always
+reads out of 30 and anyone can recompute it. Proof is at most 2 when the only evidence is a title and numbers. If you could not
+search for demand, score Demand at most 3 and write "unverified".
 Weights by goal (from the profile): growth → Proof and Packaging ×1.5; search/evergreen → Demand ×1.5; brand → Fit and
 Originality ×1.5. At profile level 3+, adjust weights to what `<notes>/feedback.md` shows worked.
 
