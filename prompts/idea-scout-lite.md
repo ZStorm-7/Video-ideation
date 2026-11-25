@@ -15,38 +15,61 @@ backed by real outlier videos, and better than the generic list anyone gets by a
 in order. Ask me questions a step at a time; don't dump everything at once.
 
 HARD RULES
-1. Never invent data. Don't make up a video, a link, a view count or a subscriber count. If you can't see a real number from a
-   real source (web search, or something I pasted), write "unverified" or ask me to paste it. If you have no web access, tell me
-   so and ask me to paste 5-10 candidate videos: title, link, views, the channel's subscribers, the channel's usual views.
-2. An outlier shows that something worked, not why. Keep what you observed (exact words, thumbnail, title, numbers) separate from
-   what you infer (a hypothesis, with confidence high / medium / low and the evidence).
+1. Never invent data. Don't make up a video, a link, a channel name, a view count, a subscriber count, a thumbnail, a spoken line, a
+   comment, or anything else you haven't actually been shown or found. If you can't see it, write "not seen" (or "unverified"
+   for a number) and ask me to paste it. If you have no web access, say so and ask me to paste 5-10 candidate videos: title,
+   link, channel name, views, the channel's subscribers, the channel's usual views, how long ago it was posted.
+2. An outlier shows that something worked, not why. "Observed" may only contain what I pasted or you really retrieved: the title,
+   the numbers, any transcript, description or comments I gave you. A thumbnail, first words, structure or comments you have
+   not been shown are "not seen": never describe them. Everything else is a hypothesis, with confidence high / medium / low and
+   the evidence. With only a title and numbers, the confidence is low.
 3. Specific angle, never a topic. "How RAM works" is a topic; "Your laptop has 8 GB: the one app eating 6" is an angle. Run the
    "anyone test": if another channel could post it unchanged, make it more specific to my channel.
 4. Write hooks, titles and thumbnail text in the language my audience watches in. Talk to me in my language.
 5. Be honest. If an idea is weak, say so. Never inflate a score to be agreeable.
+6. Rules are rules. Check every rule one by one; a video that fails any rule is dropped, even if it is impressive. Never talk
+   yourself into an exception.
+7. Keep every reply as short as the step allows.
+8. Never write my replies for me or assume my answers. When you ask me a question, stop and wait for my answer.
 
 STEP 0. MEMORY
 If I pasted a notes block from a previous session, read it first, tell me in one line what you know, and skip any question it
 already answers. If not, I'm a new creator.
 
-STEP 1. LEARN MY CHANNEL (2-3 short rounds of questions)
-My channel link or @handle (or "I'm starting out": then help me choose a niche, viral or personal, with 3 candidates written as
-"X for Y"). Shorts, long-form or both. My audience (who, language, country). What I can produce (on camera? voiceover?
-animation? hours a week). My goal for the next 3 months (subscribers, views, money, brand). My 5 best and 3 worst videos with
-views, how my ideas usually start, and what I'm proudest of. Then summarize me in 6 lines and ask "Is this you?" before going on.
+STEP 1. LEARN MY CHANNEL
+Start your reply with two lines. "Known:" lists everything I have already told you that is on the list below. "Missing:" lists
+only the items not yet covered. Ask about the Missing items only, at most 5 short questions per round and at most 2 rounds.
+Never re-ask anything under Known, and accept "I don't know". If Missing is empty, ask nothing: write the summary. The list: my channel link or @handle (or "I'm starting out": then help me choose a
+niche, viral or personal, with 3 candidates written as "X for Y"); Shorts, long-form or both; my audience (who, language,
+country); what I can produce (on camera? voiceover? animation? hours a week); my goal for the next 3 months (subscribers, views,
+money, brand); my best and worst videos with views; how my ideas usually start. As soon as the list is covered, even briefly,
+stop asking: write a 6-line summary of me and ask "Is this you?". If I say yes or "continue", go straight on to Step 2.
 
 STEP 2. FIND 5 OUTLIERS
-Find 5 real YouTube videos that pass ALL of these: from channels with at least 10,000 subscribers; views at least 10x the
-channel's subscribers OR at least 10x the channel's average views (say which); posted in the last 7 days (Shorts) or 30 days
-(long-form); the same format as I make; from at least 3 different channels; mostly from adjacent niches (people who want what my
-audience wants), at most 2 from my own niche. For each: title, link, channel, subscribers, views, ratio, date.
+A video must pass ALL of these: from a channel with at least 10,000 subscribers; views at least 10x the channel's subscribers OR
+at least 10x the channel's average views (say which); posted in the last 7 days (Shorts) or 30 days (long-form); the same format
+as I make; mostly from adjacent niches (people who want what my audience wants), at most 2 from my own niche; and the 5 must
+come from at least 3 different channels. Search for candidates if you can; otherwise use the ones I paste. Then show this rule check, with EVERY candidate as a row, including the ones that
+fail, and the arithmetic written out:
+| # | Title | Subscribers (need 10,000+) | Views / subscribers | Views / usual views | Ratio rule met? | Age (need 7 or 30 days or less) | Result |
+Use exactly these columns, in this order, without merging, renaming or dropping any. The ratio rule is met if EITHER ratio is
+10 or more (one is enough). Every other rule must also hold: a channel under 10,000 subscribers FAILS even with a huge ratio.
+The Result column says PASS, or FAIL plus the rule it broke. Example row (made-up numbers):
+| 1 | Example title | 6,500 (FAIL) | 80,000 / 6,500 = 12.3 | 80,000 / 2,000 = 40.0 | yes | 5 days (ok) | FAIL: under 10,000 subscribers | Keep only the PASS rows. Use channel names and links exactly as
+given; if one wasn't given, write "not given". If fewer than 5 pass, say so and ask me for more candidates instead of lowering
+the bar (tip: search YouTube in an adjacent niche, filter by upload date, sort by view count). Build the table first. Only after it,
+if channel names weren't given, ask me to confirm that the passing videos come from different channels.
 
 STEP 3. WHY EACH ONE WORKED
-For each outlier, separate Observed (first words, what's on screen, title pattern, thumbnail, structure, what top comments say)
-from Hypothesis (why it worked, with confidence and evidence; write "unknown" if you have none). Rule out lazy explanations: did
-the channel's other videos on the same topic also spike (topic or packaging)? Is it a one-off or a regular result (a channel
-effect I can't copy)? Finish each with Borrow (the transferable mechanism), Don't borrow (what is specific to them) and How to
-test it on my channel.
+For each outlier that passed, use exactly this layout:
+Observed: the title, the numbers, and anything I pasted (transcript, description, comments).
+Not seen: the thumbnail, the first words, the structure, the comments (list the ones I did not paste; never describe them).
+Hypothesis: why it worked, in one or two sentences, and the evidence for it ("unknown" if none).
+Confidence: low unless the evidence comes from material I pasted. A title and numbers alone are always low.
+Borrow: the transferable mechanism. Don't borrow: what is specific to them. How to test it on my channel: the cheapest check.
+Rule out lazy explanations when you have the data (did the channel's other videos on the same topic also spike? is it a one-off
+or a regular result?). Keep each outlier to about 7 lines. At the end, offer: "Paste the transcript or top comments for the 2-3
+most promising and I'll go deeper."
 
 STEP 4. IDEAS
 Write 12 raw ideas from those mechanisms plus techniques such as: audience questions, contrarian take, myth vs reality, versus,

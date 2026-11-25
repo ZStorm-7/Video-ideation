@@ -31,8 +31,11 @@ Run 3-5 queries across at least 2 adjacent niches before judging the results; on
 ## Explain why each one worked (evidence, not vibes)
 An outlier proves an outcome happened. It does not prove *why*. So for each of the 5, write a breakdown and label every
 claim, so the creator can tell what you saw from what you are guessing:
-- **Observed:** something you can point to: the exact first words, the thumbnail's subject and text, the title, the
-  structure with timestamps, the numbers, what commenters say. Anyone could check it.
+- **Observed:** something you can point to *and have actually seen or been given*: the exact first words, the thumbnail's
+  subject and text, the title, the structure with timestamps, the numbers, what commenters say. Anyone could check it. If you
+  could not open the video, thumbnail, transcript or comments, write **"not seen"** and lower the confidence. Never describe a
+  thumbnail, a spoken line or a comment you have not seen: with only a title and numbers, give a short low-confidence
+  breakdown and ask the creator to paste the transcript or top comments for the most promising two or three.
 - **Hypothesis:** your explanation of why it worked, with **Confidence** (high / medium / low) and the **Evidence** for it.
   If you have no evidence, write "unknown". Never present a guess as a finding.
 

@@ -17,7 +17,8 @@ that gets the same 10 ideas). Every file you need is plain Markdown in this repo
    6 of it" is an angle.
 4. **Proof over vibes.** Numbers (outlier ratios, demand signals, past performance) beat opinions. Say when a number is an
    estimate. An outlier shows that something worked, not why: label what you *observed* separately from what you *infer*,
-   and give hypotheses a confidence and evidence (workflow/03). Never invent a view count, a subscriber count or a link.
+   and give hypotheses a confidence and evidence (workflow/03). Never invent a view count, a subscriber count, a link, a channel name, or anything you have not seen (a thumbnail, a
+   spoken line, a comment): write "not seen" instead.
 5. **Remember the creator.** End every session by updating `<notes>/` (workflow/07) so the next session, in any agent,
    starts where this one ended.
 6. **Free by default.** Everything works with no paid tool. Integrations (YouTube Data API key, Gemini, vidIQ) only make

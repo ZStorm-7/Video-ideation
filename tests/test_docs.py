@@ -33,6 +33,11 @@ class CopyPastePrompts(unittest.TestCase):
         for must in ('Never invent data', 'unverified', 'Observed', 'Hypothesis', 'Saved', 'idea-scout-notes', 'Never put passwords'):
             self.assertIn(must.lower(), flat, must)
 
+    def test_lite_prompt_blocks_invented_observations_and_rule_bending(self):
+        flat = ' '.join(self.lite().split()).lower()
+        for must in ('not seen', 'rule check', 'every candidate', 'fail', 'never talk yourself into an exception', 'never re-ask', 'channel name', 'always low', 'either ratio is 10 or more', 'known:', 'missing:', 'build the table first', 'under 10,000 subscribers', 'never write my replies for me'):
+            self.assertIn(must, flat, must)
+
     def test_loader_points_at_the_raw_skill_file(self):
         self.assertIn('https://raw.githubusercontent.com/ZStorm-7/Video-ideation/main/SKILL.md', read('prompts/idea-scout-loader.md'))
 
@@ -61,6 +66,8 @@ class Features(unittest.TestCase):
             t = read(rel)
             self.assertIn('Observed', t, rel); self.assertIn('Hypothesis', t, rel)
         self.assertIn('Confidence', read('workflow/03-find-outliers.md'))
+        for rel in ('workflow/03-find-outliers.md', 'templates/outliers.md', 'SKILL.md'):
+            self.assertIn('not seen', read(rel), rel)
 
 
 class Links(unittest.TestCase):
