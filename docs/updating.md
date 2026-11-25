@@ -1,34 +1,27 @@
 # Getting updates
 
-This skill keeps improving (new niche packs, fixes, better prompts). Your copy of it holds your private channel notes in
-`creator/`, so updating means merging the new skill files in without touching `creator/`. The public repo never
-changes `creator/`, so there is nothing to clash with.
+This skill keeps improving (new niche packs, fixes, better prompts). Your channel notes live in a separate private repo
+(`docs/memory.md`), so updating the skill can never touch them. From the skill's folder:
 
-## One-time setup (in your copy of the repo)
 ```bash
-git remote add upstream https://github.com/ZStorm-7/Video-ideation.git
+git pull
 ```
 
-## Each time you want the latest version
+If you installed it as a Claude Code skill, that folder is `~/.claude/skills/idea-scout`:
+
 ```bash
-git fetch upstream
-git merge upstream/main
+git -C ~/.claude/skills/idea-scout pull
 ```
 
-The very first time, git will refuse because a repo made with "Use this template" has its own history. Add the flag once:
-```bash
-git merge upstream/main --allow-unrelated-histories
-```
-If git reports a conflict, it will be in a file you edited yourself (for example a niche pack you customized). Keep your
-version of anything you changed on purpose, take theirs for the rest, then `git add` the files and `git commit`.
-Your `creator/` files are never in the conflict list.
-
-Then push: `git push`.
-
-## If you installed it as a Claude Code skill
-Run the same commands inside `~/.claude/skills/idea-scout`.
+That's it. If git says you have local changes, you edited a skill file (for example a niche pack you customized): commit
+your change first (`git commit -am "my edits"`) and pull again; git will merge, and only a clash on the same lines needs a
+decision. Keep your version of anything you changed on purpose.
 
 ## Tip for agents
-If the creator asks to "update the skill", run the commands above. Don't touch `creator/`, and don't force-push.
-After merging, tell the creator in one line what changed (read the new commit messages with
-`git log --oneline HEAD@{1}..HEAD`).
+If the creator asks to "update the skill", run the command above. Don't touch the notes, and don't force-pull or reset.
+Afterwards tell the creator in one line what changed: `git log --oneline HEAD@{1}..HEAD`.
+
+## Moving from an older copy (notes inside the skill folder)
+Older versions kept notes in a `creator/` folder inside your own private copy of the skill. To switch: install the skill
+fresh from the public repo, then `python3 tools/notes.py init --import <path to your old creator folder>` and set up the
+private notes repo as in `docs/memory.md`. Then you can archive the old private copy.

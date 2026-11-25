@@ -13,7 +13,7 @@ Thanks for helping creators get better ideas. Good first contributions:
 
 Rules
 - Keep everything agent-neutral Markdown; tool-specific steps go in `docs/integrations.md`.
-- Never commit keys, `.env`, or anyone's private channel data. `creator/` stays empty in this repo.
+- Never commit keys, `.env`, or anyone's private channel data. This repo holds no creator notes: those live in each creator's own private repo.
 - Claims about YouTube need a source (`docs/why-it-works.md`) or are labelled as opinion.
 - One topic per pull request; describe what you tested.
 

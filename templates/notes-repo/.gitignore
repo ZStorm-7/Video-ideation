@@ -1,0 +1,4 @@
+# Keys never belong in your notes
+.env
+*.env
+.DS_Store

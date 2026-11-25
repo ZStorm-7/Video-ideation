@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Repeat check (step 5a): flags ideas too close to the creator's past videos or the outliers' topics. No key needed.
 
-    python3 tools/overlap.py --ideas ideas.txt [--past creator/past-videos.md] [--outliers creator/outliers.md] [--threshold 0.5]
+    python3 tools/overlap.py --ideas ideas.txt [--past <notes>/past-videos.md] [--outliers <notes>/outliers.md] [--threshold 0.5]
     python3 tools/overlap.py --idea "Why your Wi-Fi is slower upstairs"
 
 ideas.txt: one idea (angle or working title) per line. Similarity = share of the idea's meaningful words (stop words
@@ -59,7 +59,7 @@ def titles(md):
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('--ideas'); ap.add_argument('--idea', action='append', default=[])
-    ap.add_argument('--past', default=os.path.join(yt.ROOT, 'creator', 'past-videos.md')); ap.add_argument('--outliers', default=os.path.join(yt.ROOT, 'creator', 'outliers.md'))
+    ap.add_argument('--past', default=os.path.join(yt.notes_dir(), 'past-videos.md')); ap.add_argument('--outliers', default=os.path.join(yt.notes_dir(), 'outliers.md'))
     ap.add_argument('--threshold', type=float, default=0.5); a = ap.parse_args()
     ideas = a.idea + ([l.strip() for l in open(a.ideas, encoding='utf-8') if l.strip()] if a.ideas else [])
     refs = [('your video', t) for t in titles(a.past)] + [('outlier', t) for t in titles(a.outliers)]

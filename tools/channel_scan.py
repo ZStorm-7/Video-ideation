@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Scan a creator's channel -> creator/past-videos.md (step 1). Needs a free YouTube Data API key (see tools/yt.py).
+"""Scan a creator's channel -> <notes>/past-videos.md (step 1). Needs a free YouTube Data API key (see tools/yt.py).
 
-    python3 tools/channel_scan.py @yourhandle [--out creator/past-videos.md] [--limit 500]
+    python3 tools/channel_scan.py @yourhandle [--out <notes>/past-videos.md]  (default: your notes folder, see tools/notes.py where) [--limit 500]
 
 Lists every upload (Shorts and long-form separately) with views, date, length, views vs the median of the same format,
 and flags hits (>= 2x median) and flops (<= 0.5x median).
@@ -11,7 +11,7 @@ import yt
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument('handle'); ap.add_argument('--out', default=os.path.join(yt.ROOT, 'creator', 'past-videos.md')); ap.add_argument('--limit', type=int, default=500)
+    ap.add_argument('handle'); ap.add_argument('--out', default=os.path.join(yt.notes_dir(), 'past-videos.md')); ap.add_argument('--limit', type=int, default=500)
     a = ap.parse_args()
     ch = yt.channel(handle=a.handle if a.handle.startswith('@') else None, cid=None if a.handle.startswith('@') else a.handle)
     ids = yt.playlist_ids(ch['contentDetails']['relatedPlaylists']['uploads'], a.limit); shorts = yt.shorts_ids(ch['id'])

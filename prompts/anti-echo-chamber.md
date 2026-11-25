@@ -6,7 +6,7 @@ The agent runs this itself. It also works pasted into any free AI chat (paste th
 Here is my channel profile and 5 outlier videos. Each got at least 10 times more views than its channel's subscribers
 or its usual views, from channels with 10,000+ subscribers, in the last [7 / 30] days.
 
-MY CHANNEL: [paste creator/profile.md, or: niche, audience, format, tone, what worked, what flopped]
+MY CHANNEL: [paste <notes>/profile.md, or: niche, audience, format, tone, what worked, what flopped]
 
 OUTLIERS:
 1. [title] - [link] - [views] views, [subs] subs, [ratio]x

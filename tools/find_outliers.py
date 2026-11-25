@@ -2,7 +2,7 @@
 """Find outlier videos (step 3). Needs a free YouTube Data API key (see tools/yt.py).
 
     python3 tools/find_outliers.py --q "how computers work" --q "science explained" --format short --days 7
-    python3 tools/find_outliers.py --q "how computers work" --format long --days 30 --save creator/outliers.md
+    python3 tools/find_outliers.py --q "how computers work" --format long --days 30 --save <notes>/outliers.md
     python3 tools/find_outliers.py --count --q "exact angle" --days 7        # saturation: recent uploads on an angle
 
 Rules: channel >= 10,000 subscribers; views >= 10x subscribers and/or >= 10x the channel's average views (its last 15

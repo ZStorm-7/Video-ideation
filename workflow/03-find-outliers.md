@@ -21,13 +21,13 @@ Always add the audience's language and country (`--lang`, `--region`) so you fin
 Run 3-5 queries across at least 2 adjacent niches before judging the results; one query is not a search.
 
 ## How (free first)
-- **YouTube Data API key (free):** `python3 tools/find_outliers.py --q "keyword" --q "keyword 2" --format short --days 7 --lang en --save creator/outliers.md`
-  → prints candidates that pass the rules (ratio, 10k minimum, recency) and appends picks to `creator/outliers.md`.
+- **YouTube Data API key (free):** `python3 tools/find_outliers.py --q "keyword" --q "keyword 2" --format short --days 7 --lang en --save <notes>/outliers.md`
+  → prints candidates that pass the rules (ratio, 10k minimum, recency) and appends picks to `<notes>/outliers.md`.
 - **No key:** search YouTube (filter: upload date, sort by view count) or browse the adjacent channels; for each candidate
   note views, subscribers (and the channel's typical views from its Videos/Shorts tab); keep only those that pass.
   vidIQ's outlier finder, TikTok and Reddit work too (TikTok/Reddit only as inspiration, the 5 must be YouTube).
 - Get each outlier's **transcript** (description → Show transcript) and note the **thumbnail and title**.
 
-## Write `creator/outliers.md` (template: `templates/outliers.md`)
+## Write `<notes>/outliers.md` (template: `templates/outliers.md`)
 Per outlier: link, title, channel, subscribers, views, channel average, ratio(s), date found, niche, and a 3-line
 "why it worked" (hook in the first 1.5-3 s, structure, packaging). Outliers older than 30 days are stale: refresh them.

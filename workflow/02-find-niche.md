@@ -27,4 +27,4 @@ For the chosen niche, recommend the **3 best videos to study right now**: recent
 (outliers when possible), from channels with 10k+ subscribers, ideally from 3 different channels. For each: link, why it
 worked (hook, angle, packaging), what to copy (structure, pacing, style: never the topic).
 
-Save the chosen niche, the positioning line and the 3 study videos to `creator/profile.md`.
+Save the chosen niche, the positioning line and the 3 study videos to `<notes>/profile.md`.

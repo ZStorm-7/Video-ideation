@@ -26,17 +26,19 @@ See a real run: [`examples/bitframe-2026-11.md`](examples/bitframe-2026-11.md).
 3. **Ideates** with their psychology + proven techniques (contrarian takes, hidden mechanisms, challenges, series…).
 4. **Checks and scores:** repeat check, free demand check, saturation, makeability.
 5. **Packages** the top 3: hooks, titles, thumbnail.
-6. **Remembers:** saves your profile, backlog and results in `creator/` and commits them, so every new session
-   (any agent) starts where you left off. The more results you log, the more specific it gets.
+6. **Remembers, privately:** saves your profile, backlog and results in **your own private notes repo** (not in this
+   public one), so every new session in any agent starts where you left off. The more results you log, the more
+   specific it gets. See [`docs/memory.md`](docs/memory.md).
 
 ## Install (2 minutes)
-1. On [github.com/ZStorm-7/Video-ideation](https://github.com/ZStorm-7/Video-ideation) click **Use this template → Create a new repository → Private** (your channel notes stay yours).
-2. Open it in your AI agent:
-   - **Claude Code:** `git clone https://github.com/<you>/<your-copy> ~/.claude/skills/idea-scout`, then type `/idea-scout`.
-   - **Any other agent:** open the repo and say *"Read SKILL.md and give me video ideas."*
+1. **Get the skill** (public, nothing personal in it):
+   - **Claude Code:** `git clone https://github.com/ZStorm-7/Video-ideation ~/.claude/skills/idea-scout`, then type `/idea-scout`.
+   - **Any other agent:** clone it anywhere, open the folder, and say *"Read SKILL.md and give me video ideas."*
    - **No agent?** Paste [`prompts/anti-echo-chamber.md`](prompts/anti-echo-chamber.md) into any free AI chat.
-3. Optional, free: add a YouTube Data API key to `.env` for automatic channel scans and outlier search
-   ([`docs/integrations.md`](docs/integrations.md)).
+2. **First run:** the skill offers to create your **private notes repo** (`idea-scout-notes` on GitHub, or a local folder
+   if you prefer). Say yes. It checks the repo is private before it saves anything. Plain Markdown, readable on your phone.
+3. Optional, free: add a YouTube Data API key to `~/.config/idea-scout/.env` for automatic channel scans and outlier
+   search ([`docs/integrations.md`](docs/integrations.md)).
 
 ## Free tools included (Python 3, nothing to install)
 | Tool | What | Key? |
@@ -45,18 +47,20 @@ See a real run: [`examples/bitframe-2026-11.md`](examples/bitframe-2026-11.md).
 | `tools/find_outliers.py --q "..."` | outliers: 10x subscribers OR 10x channel average, 10k+ subs, recent | free YouTube key |
 | `tools/overlap.py --idea "..."` | "did I already make this?" (any language) | none |
 | `tools/demand.py "topic"` | real YouTube autocomplete demand signal + title phrases | none |
+| `tools/notes.py init / check / save` | creates your private notes repo, refuses to push it if public or if it holds a key | none |
 
 ## Other things you can ask for
 Besides a full run, say: **"ideas from my backlog"**, **"score my idea: ..."**, **"find / change my niche"**, or
 **"log how my video did"** (that last one is what makes the skill smarter about *you*). See `workflow/modes.md`.
 
 ## Keeping it up to date
-Your private copy doesn't update itself. See [`docs/updating.md`](docs/updating.md) (three commands).
+`git pull` in the skill folder. Your notes live elsewhere, so an update never touches them
+([`docs/updating.md`](docs/updating.md)).
 
 ## Repo map
 `SKILL.md` (start) · `workflow/` (the 8 steps + shorter modes) · `library/` (techniques, hooks, titles, thumbnails) ·
 `niches/` (tech, gaming, education, vlog, food, fitness, finance, business, beauty, travel starting packs) ·
-`templates/` · `creator/` (your memory) · `tools/` · `tests/` · `docs/` · `examples/`
+`templates/` · `tools/` · `tests/` · `docs/` · `examples/`. Your memory is not here: it's your private notes repo.
 
 ## Contributing
 Niche packs, techniques, real example runs and agent reports are the most useful. See [CONTRIBUTING.md](CONTRIBUTING.md).
