@@ -9,6 +9,21 @@ jobs:
         with:
           python-version: "3.x"
       - name: Unit tests (offline, standard library only)
-        run: python3 -W error::ResourceWarning -m unittest discover -s tests -v
+        run: |
+          set -o pipefail
+          python3 -W error::ResourceWarning -m unittest discover -s tests -v 2>&1 | tee test-output.txt
+          # A leaked file is only printed as "Exception ignored", which does not fail a test by itself: fail on it here.
+          if grep -qE "Exception ignored|ResourceWarning" test-output.txt; then echo "::error::the code under test leaks an open file"; exit 1; fi
       - name: Tools still compile
         run: python3 -m py_compile tools/*.py
+      - name: Build the Claude app install file
+        run: python3 tools/build_zip.py --out idea-scout.zip
+      - name: Show what is inside the ZIP
+        run: python3 -m zipfile -l idea-scout.zip
+      - name: Attach the ZIP to this run
+        uses: actions/upload-artifact@v4
+        with:
+          name: idea-scout-zip
+          path: idea-scout.zip
+          retention-days: 14
+          if-no-files-found: error

@@ -14,7 +14,7 @@ EXCLUDE = ('tests/', '.github/', 'CONTRIBUTING.md', 'CODE_OF_CONDUCT.md', 'CLAUD
 MAX_NAME, MAX_DESC = 64, 200
 
 def frontmatter(path):
-    text = open(path, encoding='utf-8').read()
+    with open(path, encoding='utf-8') as f: text = f.read()
     fm = text.split('---')[1] if text.startswith('---') else ''
     name, desc = re.search(r'(?m)^name: (.*)$', fm), re.search(r'(?m)^description: (.*)$', fm)
     return (name.group(1).strip() if name else ''), (desc.group(1).strip() if desc else '')

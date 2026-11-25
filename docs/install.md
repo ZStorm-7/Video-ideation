@@ -25,6 +25,12 @@ Things to know in the app:
 - **Plans:** the Claude help page says Skills are available on Free, Pro, Max, Ultra, Team and Enterprise plans, with code
   execution enabled.
 
+### Try a build before it is released
+Every CI run on GitHub builds the install file and attaches it. Open the run (the **Actions** tab, or a pull request's
+**Checks**), scroll to **Artifacts**, and download **`idea-scout-zip`**. GitHub wraps every artifact in its own ZIP, so
+**unzip once** to get the real `idea-scout.zip`, then upload that one in Customize → Skills. You need to be signed in to
+GitHub with access to the repo, and artifacts expire after 14 days.
+
 ## Claude Code
 ```bash
 git clone https://github.com/ZStorm-7/Video-ideation ~/.claude/skills/idea-scout
