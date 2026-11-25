@@ -10,11 +10,15 @@ Use `prompts/anti-echo-chamber.md` (the core prompt) on the 5 outliers, plus the
 - **Format:** Short or long-form (and the rough length).
 - **Why this creator:** one line tying it to their profile (a skill, a past hit, a recurring format, their audience).
 
+Write the ideas in the audience's language (profile), not the language you are chatting in, if they differ. If the
+creator's niche has a pack in `niches/`, check its "Overdone" list before you keep an idea.
+
 ## Make them non-generic
 - Run the "anyone test": if another channel in the niche could post it unchanged, add specificity (the creator's angle,
   experience, format, character, location, data, a named example).
 - Avoid the overused defaults unless an outlier proves a fresh twist: generic "what if…", "history facts", "top 10"
   without a hook, "explained" without a stake.
-- Mix: at least 3 evergreen (searchable for years), at least 2 timely (riding something happening now), at least 1 series
-  or repeatable format idea.
+- Mix: at least 3 evergreen (searchable for years), at least 1 series or repeatable format idea, and timely ideas (riding
+  something happening now) only when you can name the real current thing they ride. Never invent a trend; no verified trend
+  means no timely idea, or one labelled "unverified trend".
 - Use the creator's own sources: comment questions on their videos, their backlog, their feedback ("what worked here").

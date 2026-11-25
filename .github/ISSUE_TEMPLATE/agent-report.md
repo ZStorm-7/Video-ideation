@@ -5,5 +5,5 @@ labels: compatibility
 ---
 **Agent + version:**
 **Did it read SKILL.md and follow the steps?** yes / partly / no
-**Did memory (creator/ commit + push) work?**
+**Did memory work (private notes repo saved with tools/notes.py save)?**
 **What broke:**

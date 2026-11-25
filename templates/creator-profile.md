@@ -1,5 +1,5 @@
 # Creator profile
-<!-- The skill reads this first, every session. Keep it short and concrete. Copy to creator/profile.md. -->
+<!-- The skill reads this first, every session. Keep it short and concrete. Copy to <notes>/profile.md. -->
 
 - **Profile depth:** 0 / 1 / 2 / 3 / 4   (see SKILL.md)   · **Last updated:** YYYY-MM-DD
 - **Channel:** @handle · link · subscribers · started YYYY

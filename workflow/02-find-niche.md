@@ -19,10 +19,12 @@ Middle path worth suggesting: a **personal niche with a viral format** (your top
 Ask 3-5 quick questions (interests/skills, what they could make 50 videos about, who they want to help or entertain,
 on camera or not, Shorts or long). Propose **3 candidate niches**, each with: a one-line positioning ("X for Y"), the
 3 biggest channels in it with subscriber counts (demand ceiling), how crowded it is, one example angle.
+If `niches/` has a pack for a candidate, read it for the adjacent niches and the overdone list; check the channel sizes
+and crowding with a real search, not from the pack.
 
 ## 2c. Show 3 videos to study **[ASK]** pick a niche
 For the chosen niche, recommend the **3 best videos to study right now**: recent, high views relative to the channel
 (outliers when possible), from channels with 10k+ subscribers, ideally from 3 different channels. For each: link, why it
 worked (hook, angle, packaging), what to copy (structure, pacing, style: never the topic).
 
-Save the chosen niche, the positioning line and the 3 study videos to `creator/profile.md`.
+Save the chosen niche, the positioning line and the 3 study videos to `<notes>/profile.md`.

@@ -6,4 +6,12 @@ long-form <= 30 days; mostly adjacent niches; 5 videos from at least 3 channels.
 |---|---|---|---|---|---|---|---|---|
 
 ## Why each worked
-1. **Hook (first 1.5-3 s):** … **Structure:** … **Packaging:** … **Psychology to borrow:** …
+<!-- An outlier proves an outcome, not a cause. Label every claim: Observed (you can point to it) or Hypothesis (+ confidence
+and evidence; "unknown" if you have none). See workflow/03-find-outliers.md. -->
+### 1. <title>
+- **Observed** (write "not seen" for anything you could not open; never describe it): hook (exact first words + what's on screen): … · packaging (title pattern, thumbnail subject/text): … · structure (timestamps, when the first payoff lands): … · comments say: …
+- **Hypothesis 1:** … · **Confidence:** high / medium / low · **Evidence:** …
+- **Ruled out:** same topic on this channel before? … · one-off or regular? … · still climbing? …
+- **Borrow:** the transferable mechanism, one sentence
+- **Don't borrow:** what is specific to this channel or topic
+- **How to test it on my channel:** the cheapest check

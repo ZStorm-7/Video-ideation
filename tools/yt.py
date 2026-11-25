@@ -1,21 +1,29 @@
 """Shared helpers for the optional tools (Python 3.8+, standard library only).
 
 YouTube Data API v3 key: free (console.cloud.google.com -> enable "YouTube Data API v3" -> Credentials -> API key).
-Put it in the environment as YT_API_KEY, or in a .env file next to this repo's README (git-ignored):  YT_API_KEY=...
+Put it in the environment as YT_API_KEY, or in ~/.config/idea-scout/.env (outside every repo, so it can't be committed):
+    YT_API_KEY=...
+(A .env next to this repo's README also works; it is git-ignored.) Never put keys in your notes repo.
 Free quota: 10,000 units/day. A search costs 100 units; video/channel/playlist lookups cost 1.
 """
 import json, os, re, statistics, sys, urllib.error, urllib.parse, urllib.request
 
 API = 'https://www.googleapis.com/youtube/v3/'
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DEFAULT_NOTES = '~/idea-scout-notes'
+
+def notes_dir():
+    """Where the creator's PRIVATE notes live (a separate repo from this public skill): $IDEA_SCOUT_NOTES, else ~/idea-scout-notes."""
+    return os.path.abspath(os.path.expanduser(os.environ.get('IDEA_SCOUT_NOTES') or DEFAULT_NOTES))
 
 def key():
     if os.environ.get('YT_API_KEY'): return os.environ['YT_API_KEY']
-    env = os.path.join(ROOT, '.env')
-    if os.path.exists(env):
-        for line in open(env, encoding='utf-8'):
-            k, _, v = line.strip().partition('=')
-            if k.strip() == 'YT_API_KEY' and v.strip(): return v.strip().strip('"\'')
+    for env in (os.path.expanduser('~/.config/idea-scout/.env'), os.path.join(ROOT, '.env')):
+        if os.path.exists(env):
+            with open(env, encoding='utf-8') as f:
+                for line in f:
+                    k, _, v = line.strip().partition('=')
+                    if k.strip() == 'YT_API_KEY' and v.strip(): return v.strip().strip('"\'')
     return None
 
 def get(ep, **q):

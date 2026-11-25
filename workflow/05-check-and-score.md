@@ -1,9 +1,9 @@
 # 5. Check and score
 
 ## 5a. Hard filters (drop the idea if it fails)
-- **Not a repeat:** `python3 tools/overlap.py --ideas ideas.txt --past creator/past-videos.md --outliers creator/outliers.md`
+- **Not a repeat:** `python3 tools/overlap.py --ideas ideas.txt --past <notes>/past-videos.md --outliers <notes>/outliers.md`
   flags titles/angles too close (≥ 50 % word overlap) to the creator's own videos or to the 5 outliers' topics. No tool?
-  Compare by hand against `creator/past-videos.md`.
+  Compare by hand against `<notes>/past-videos.md`.
 - **Makeable:** fits the creator's constraints (time, budget, on camera or not, skills).
 - **Safe:** nothing misleading, harmful or against YouTube's policies; no other creator's content reused.
 
@@ -23,8 +23,11 @@
 | **Demand** | people search for it (autocomplete/volume) or it rides a live trend |
 | **Packaging** | the title + thumbnail are obvious and make you need to click (write them first: if you can't, it's weak) |
 | **Feasibility** | the creator can make it well this week |
+Total /30 = Σ(weight × score) × 30 ÷ Σ(weight × 5), with every weight 1 unless the goal below changes it, so the total always
+reads out of 30 and anyone can recompute it. Proof is at most 2 when the only evidence is a title and numbers. If you could not
+search for demand, score Demand at most 3 and write "unverified".
 Weights by goal (from the profile): growth → Proof and Packaging ×1.5; search/evergreen → Demand ×1.5; brand → Fit and
-Originality ×1.5. At profile level 3+, adjust weights to what `creator/feedback.md` shows worked.
+Originality ×1.5. At profile level 3+, adjust weights to what `<notes>/feedback.md` shows worked.
 
 ## 5d. Rank
 Keep the top 3-5. For each, name its 2 strongest criteria and its weakest (and how to fix it). Everything else goes to
