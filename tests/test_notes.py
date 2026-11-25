@@ -97,14 +97,16 @@ class Safety(NotesCase):
 
 class PublicCheck(unittest.TestCase):
     """is_public must not let a rate-limited or unclear GitHub API answer slip through as 'fine'."""
-    def err(self, code): return urllib_error(code)
+    def raises(self, code):
+        err = urllib_error(code); self.addCleanup(err.close)  # an HTTPError holds a file: close it or newer Pythons warn
+        return err
 
     def test_404_means_not_public(self):
-        with mock.patch('urllib.request.urlopen', side_effect=urllib_error(404)):
+        with mock.patch('urllib.request.urlopen', side_effect=self.raises(404)):
             self.assertIs(notes.is_public('o', 'r'), False)
 
     def test_rate_limited_api_falls_back_to_anonymous_git(self):
-        with mock.patch('urllib.request.urlopen', side_effect=urllib_error(403)), mock.patch.object(notes, 'public_via_git', return_value=True) as g:
+        with mock.patch('urllib.request.urlopen', side_effect=self.raises(403)), mock.patch.object(notes, 'public_via_git', return_value=True) as g:
             self.assertIs(notes.is_public('o', 'r'), True); g.assert_called_once()
 
     def test_git_fallback_reads_the_error(self):
@@ -123,7 +125,7 @@ class PublicCheck(unittest.TestCase):
 
 def urllib_error(code):
     import urllib.error
-    return urllib.error.HTTPError('https://api.github.com/x', code, 'x', {}, None)
+    return urllib.error.HTTPError('https://api.github.com/x', code, 'x', {}, __import__('io').BytesIO(b''))
 
 
 class Save(NotesCase):
